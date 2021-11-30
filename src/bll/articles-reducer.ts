@@ -1,36 +1,36 @@
 import {Dispatch} from "redux";
-import {API, ArticlesType, GetArticlesParamsType, ResponseArticlesType} from "../dal/api";
+import {API, ArticlesType, GetArticlesParamsType} from "../dal/api";
 
 
-let initialState:ArticlesInitialStateType = {
-    articles: [
-        {
-            id: 0,
-            title: "",
-            url: "",
-            imageUrl: "",
-            newsSite: "",
-            summary: "",
-            publishedAt: "",
-            updatedAt: "",
-            featured: false,
-            launches: [],
-            events: [],
-        }],
-};
+// let initialState:ArticlesInitialStateType = {
+//     articles: [
+//         {
+//             id: 0,
+//             title: "",
+//             url: "",
+//             imageUrl: "",
+//             newsSite: "",
+//             summary: "",
+//             publishedAt: "",
+//             updatedAt: "",
+//             featured: false,
+//             launches: [],
+//             events: [],
+//         }],
+// };
+//
+// type ArticlesInitialStateType = {
+//     articles: ArticlesType[]
+// }
 
-type ArticlesInitialStateType = {
-    articles: ArticlesType[]
-}
+const initialState: Array<ArticlesType> = []
 
 //Reducer
-export const articlesReducer = (state:ArticlesInitialStateType = initialState, action: ActionsTypes): ArticlesInitialStateType => {
+export const articlesReducer = (state: Array<ArticlesType> = initialState, action: ActionsTypes): Array<ArticlesType> => {
     switch (action.type) {
         case SET_ARTICLES:
-            return {
-                ...state,
-                articles: action.data.articles
-            }
+            return action.articles
+
         default:
             return state;
     }
@@ -40,14 +40,15 @@ export const articlesReducer = (state:ArticlesInitialStateType = initialState, a
 const SET_ARTICLES = 'SET-SET_ARTICLES';
 
 // Action Creators
-export const SetArticlesAC = (data:ResponseArticlesType) => ({
+export const SetArticlesAC = (articles: Array<ArticlesType>) => ({
     type: SET_ARTICLES,
-    data,
+    articles,
 } as const);
 
 export const getArticlesTC = (data: GetArticlesParamsType) => (dispatch: Dispatch) => {
     API.getArticles(data)
         .then(res => {
+            debugger
             dispatch(SetArticlesAC(res.data))
         })
         .catch(err => {
