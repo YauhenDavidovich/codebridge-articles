@@ -48,7 +48,6 @@ export const SetArticlesAC = (articles: Array<ArticlesType>) => ({
 export const getArticlesTC = (data: GetArticlesParamsType) => (dispatch: Dispatch) => {
     API.getArticles(data)
         .then(res => {
-            debugger
             dispatch(SetArticlesAC(res.data))
         })
         .catch(err => {
