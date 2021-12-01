@@ -5,6 +5,7 @@ import {getArticlesTC} from "./bll/articles-reducer";
 import {AppRootStateType} from "./bll/store";
 import {ArticlesType} from "./dal/api";
 import Article from "./components/Article";
+import Highlighter from "react-highlight-words";
 
 function App() {
     const dispatch = useDispatch()
@@ -15,7 +16,13 @@ function App() {
         },[]
     )
     return (
+
         <div className="App">
+            <span>
+
+            </span>
+
+
             <div className={"articles__wrapper"}>
                 {articles.map(article => { return <Article
                     id={article.id}
@@ -23,6 +30,8 @@ function App() {
                     imageUrl={article.imageUrl}
                     summary={article.summary}
                     publishedAt={article.publishedAt}
+                    search={"and"}
+
                 />})}
             </div>
 

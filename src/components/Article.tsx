@@ -3,6 +3,7 @@ import {styled} from "@mui/system";
 import {Link as RouterLink} from 'react-router-dom';
 import {Card, CardActions, CardContent, CardMedia, Link, Typography} from "@mui/material";
 import {dateOptions} from "./utils/dateConvert";
+import Highlighter from "react-highlight-words";
 
 
 const StyledCard = styled(Card, {
@@ -45,6 +46,7 @@ type ArticleType = {
     // "newsSite": string,
     summary: string,
     publishedAt: string,
+    search: string,
 }
 
 
@@ -64,10 +66,20 @@ const Article = (props: ArticleType) => {
                     {new Date(props.publishedAt).toLocaleDateString("en-US",dateOptions)}
                 </Typography>
                 <Typography gutterBottom variant="h5" component="div">
-                    {props.title}
+                    <Highlighter
+                        highlightClassName="YourHighlightClass"
+                        searchWords={[props.search]}
+                        autoEscape={true}
+                        textToHighlight={props.title}
+                    />
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {props.summary}
+                    <Highlighter
+                        highlightClassName="HighlightClass"
+                        searchWords={[props.search]}
+                        autoEscape={true}
+                        textToHighlight={props.summary}
+                    />
                 </Typography>
             </CardContent>
             <StyledCardActions>
