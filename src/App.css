@@ -1,4 +1,13 @@
 .App {
-  text-align: center;
-  background-color: #E5E5E5;
+  max-width: 1290px;
+  width: 100%;
+  margin:0 auto;
+  background-color: #FFFFFF;;
 }
+
+.articles__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
