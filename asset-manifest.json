@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/codebridge-articles/static/css/main.ca5db2fb.chunk.css",
-    "main.js": "/codebridge-articles/static/js/main.07b1cfbe.chunk.js",
-    "main.js.map": "/codebridge-articles/static/js/main.07b1cfbe.chunk.js.map",
+    "main.js": "/codebridge-articles/static/js/main.ec1e9efc.chunk.js",
+    "main.js.map": "/codebridge-articles/static/js/main.ec1e9efc.chunk.js.map",
     "runtime-main.js": "/codebridge-articles/static/js/runtime-main.053545fd.js",
     "runtime-main.js.map": "/codebridge-articles/static/js/runtime-main.053545fd.js.map",
-    "static/js/2.a90c3a80.chunk.js": "/codebridge-articles/static/js/2.a90c3a80.chunk.js",
-    "static/js/2.a90c3a80.chunk.js.map": "/codebridge-articles/static/js/2.a90c3a80.chunk.js.map",
+    "static/js/2.006b3b5e.chunk.js": "/codebridge-articles/static/js/2.006b3b5e.chunk.js",
+    "static/js/2.006b3b5e.chunk.js.map": "/codebridge-articles/static/js/2.006b3b5e.chunk.js.map",
     "static/js/3.b70e3b37.chunk.js": "/codebridge-articles/static/js/3.b70e3b37.chunk.js",
     "static/js/3.b70e3b37.chunk.js.map": "/codebridge-articles/static/js/3.b70e3b37.chunk.js.map",
     "index.html": "/codebridge-articles/index.html",
     "static/css/main.ca5db2fb.chunk.css.map": "/codebridge-articles/static/css/main.ca5db2fb.chunk.css.map",
-    "static/js/2.a90c3a80.chunk.js.LICENSE.txt": "/codebridge-articles/static/js/2.a90c3a80.chunk.js.LICENSE.txt"
+    "static/js/2.006b3b5e.chunk.js.LICENSE.txt": "/codebridge-articles/static/js/2.006b3b5e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.053545fd.js",
-    "static/js/2.a90c3a80.chunk.js",
+    "static/js/2.006b3b5e.chunk.js",
     "static/css/main.ca5db2fb.chunk.css",
-    "static/js/main.07b1cfbe.chunk.js"
+    "static/js/main.ec1e9efc.chunk.js"
   ]
 }
