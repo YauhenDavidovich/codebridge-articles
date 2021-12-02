@@ -49,9 +49,6 @@ function HomePage() {
 
         <div className="homepage">
             <Search setSearchTerm={setSearchTerm} results={searchResultCount}/>
-            <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-                Results: {searchResultCount} articles
-            </Typography>
             <div className={"articles__wrapper"}>
                 {renderArticles().map(article => {
                     return <Article

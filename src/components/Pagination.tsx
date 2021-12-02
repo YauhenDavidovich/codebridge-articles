@@ -15,7 +15,6 @@ export default function Paginator(props:PaginationPropsType) {
         props.setPage(value);
     };
 
-    // @ts-ignore
     return (
         <Stack spacing={2}>
             <Pagination count={numPages} page={props.currentPage} onChange={handleChange} />
