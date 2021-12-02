@@ -82,8 +82,8 @@ const Article = (props: ArticleType) => {
                 </Typography>
             </CardContent>
             <StyledCardActions>
-                <Link component={RouterLink} to={"/article/"+props.id} color="secondary" underline="none">
-                    {'Read more '}
+                <Link component={RouterLink} to={"/article/"+props.id} color="black" underline="none">
+                    {'Read more→ '}
                 </Link>
             </StyledCardActions>
         </StyledCard>
